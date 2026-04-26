@@ -1,1 +1,114 @@
+:root {
+            --primary-purple: #6b5ce7;
+            --star-yellow: #ffc107;
+            --star-gray: #e0e0e0;
+            --bar-bg: #f2f4f7;
+        }
 
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f8f9fb;
+            margin: 0;
+        }
+
+        .reviews {
+            background: white;
+            padding: 50px 60px;
+            border-radius: 20px;
+            box-shadow: 0 15px 50px rgba(0,0,0,0.05);
+            width: 850px;
+        }
+
+        .reviews__summary {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            margin-bottom: 45px;
+        }
+
+        .reviews__rating {
+            font-size: 80px;
+            color: var(--primary-purple);
+            margin: 0;
+            font-weight: 800;
+        }
+
+        .reviews__stars-main {
+            color: var(--star-yellow);
+            font-size: 70px;
+            display: flex;
+            gap: 10px;
+        }
+
+        /* 4.7 uchun yarim yulduz */
+        .star-half {
+            position: relative;
+            display: inline-block;
+            color: var(--star-gray);
+        }
+        .star-half::before {
+            content: '★';
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 50%;
+            overflow: hidden;
+            color: var(--star-yellow);
+        }
+
+        .reviews__chart {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+        }
+
+        .reviews__bar-row {
+            display: flex;
+            align-items: center;
+        }
+
+        .reviews__bar-stars {
+            color: var(--star-yellow);
+            font-size: 32px;
+            width: 180px;
+            display: flex;
+            gap: 5px;
+        }
+
+        .star--gray { color: var(--star-gray); }
+
+        .reviews__progress {
+            flex: 1;
+            height: 30px;
+            appearance: none;
+            margin: 0 35px;
+        }
+
+        .reviews__progress::-webkit-progress-bar {
+            background-color: var(--bar-bg);
+            border-radius: 6px;
+        }
+
+        .reviews__progress::-webkit-progress-value {
+            background-color: var(--primary-purple);
+            border-radius: 6px;
+        }
+
+        .reviews__percentage {
+            width: 80px;
+            font-size: 26px;
+            color: #444;
+            text-align: right;
+            font-weight: 700;
+        }
+
+        .reviews__footer {
+            text-align: center;
+            color: #bbb;
+            font-size: 20px;
+            margin-top: 60px;
+        }
